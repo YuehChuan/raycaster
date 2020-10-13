@@ -7,8 +7,6 @@ bool RayCasterFloat::IsWall(float rayX, float rayY, float rayA)
 {
     float mapX = 0;
     float mapY = 0;
-    float offsetX = modff(rayX, &mapX);
-    float offsetY = modff(rayY, &mapY);
     int tileX = static_cast<int>(mapX);
     int tileY = static_cast<int>(mapY);
 
@@ -86,8 +84,6 @@ float RayCasterFloat::Distance(float playerX,
     bool verticalHit = false;
     bool horizontalHit = false;
     bool somethingDone = false;
-    int isTop = 0;
-    int isRight = 0;
 
     do {
         somethingDone = false;
